@@ -1,4 +1,4 @@
-group 'i.study.clojure'
+group 'learning.clojure'
 version '1.0-SNAPSHOT'
 
 buildscript {
@@ -16,9 +16,16 @@ buildscript {
 apply plugin: 'java'
 apply plugin: "nebula.clojure"
 
+
+compileClojure {
+    aotCompile = true
+}
+
 compileJava {
+    dependsOn compileClojure
     sourceCompatibility = 1.7
     targetCompatibility = 1.7
+    classpath += files("build/classes/main")
 }
 
 repositories {
@@ -27,10 +34,6 @@ repositories {
 
 uberjar {
     enabled = true
-}
-
-compileClojure {
-    aotCompile = false
 }
 
 dependencies {
