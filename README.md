@@ -2,6 +2,7 @@
 =====================
 
 클로저의 코드를 자바에서 불러다 쓰기 위한 설정입니다.
+
 features:
 
 - [clojuresque](https://github.com/clojuresque/clojuresque) 기반 Gradle plugin [nebula](https://plugins.gradle.org/plugin/nebula.clojure) 사용  
@@ -11,6 +12,7 @@ features:
 - [gen-class](http://clojuredocs.org/clojure.core/gen-class)
 
 To use:
+
 ```
 $ ./gradlew clean uberJar
 $ java -cp build/libs/leanning-clojure-standalone-1.0-SNAPSHOT.jar Hello
