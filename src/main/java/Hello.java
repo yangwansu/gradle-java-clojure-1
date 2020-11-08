@@ -3,7 +3,6 @@ import clojure.lang.IFn;
 import my.name.is.Helly;
 
 /**
- * Created by coupang on 2016. 8. 4..
  */
 public class Hello {
     private static IFn require = Clojure.var("clojure.core", "require");
